@@ -4427,6 +4427,22 @@ namespace Codaxy.Xlio.Model.Oxml
         inlineStr,
     }
 
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://schemas.openxmlformats.org/spreadsheetml/2006/main")]
+    public partial class CT_AutoFilter
+    {
+        [System.Xml.Serialization.XmlAttribute("ref")]
+        public string Ref { get; set; } 
+
+        public CT_AutoFilter()
+        {
+            Ref = "";
+        }
+    }
+
 
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
@@ -5179,7 +5195,7 @@ namespace Codaxy.Xlio.Model.Oxml
 
         //private CT_Scenarios scenariosField;
 
-        //private CT_AutoFilter autoFilterField;
+        private CT_AutoFilter autoFilterField;
 
         //private CT_SortState sortStateField;
 
@@ -5350,15 +5366,19 @@ namespace Codaxy.Xlio.Model.Oxml
         //    }
         //}
 
-        ///// <remarks/>
-        //public CT_AutoFilter autoFilter {
-        //    get {
-        //        return this.autoFilterField;
-        //    }
-        //    set {
-        //        this.autoFilterField = value;
-        //    }
-        //}
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElement("autoFilter")]
+        public CT_AutoFilter autoFilter
+        {
+            get
+            {
+                return this.autoFilterField;
+            }
+            set
+            {
+                this.autoFilterField = value;
+            }
+        }
 
         ///// <remarks/>
         //public CT_SortState sortState {

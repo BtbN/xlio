@@ -387,7 +387,8 @@ namespace Codaxy.Xlio.IO
                 cols = cols.Count > 0 ? cols.ToArray() : null,
                 sheetFormatPr = sheetFormat.Data,
                 sheetViews = new CT_SheetViews { sheetView = new[] { sheetView } },
-                pageSetup = new CT_PageSetup() { scale = (uint)sheet.Page.Scale }
+                pageSetup = new CT_PageSetup() { scale = (uint)sheet.Page.Scale },
+                autoFilter = sheet.AutoFilter != null ? new CT_AutoFilter { Ref = sheet.AutoFilter.Range.ToString() } : null,
             };
 
             switch (sheet.Page.Orientation)

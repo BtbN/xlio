@@ -31,6 +31,8 @@ namespace Codaxy.Xlio
         SheetData data;
         public SheetData Data { get { return data; } }
 
+        public SheetRange AutoFilter { get; set; }
+
         public CellData this[String location]
         {
             get {
